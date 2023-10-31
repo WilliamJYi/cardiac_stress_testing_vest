@@ -1,0 +1,11 @@
+.profiles {
+    display: flex;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.link:hover {
+    color: antiquewhite;
+}

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Avatar } from "@mui/material";
 import { lightBlue } from "@mui/material/colors";
 import { mockProfiles } from "../../data/mockProfiles";
@@ -7,16 +7,6 @@ import "./Profiles.css";
 
 export const Profiles = () => {
   const [profiles, setProfiles] = useState(mockProfiles);
-
-  const DisplayProfiles = () => {
-    return (
-      <div>
-        {profiles.users.map((user) => (
-          <p>{user.name}</p>
-        ))}
-      </div>
-    );
-  };
 
   return (
     <div className="container">

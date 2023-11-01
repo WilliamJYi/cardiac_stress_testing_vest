@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from "react";
 import "./Home.css";
-import { Button, CssBaseline } from "@mui/material";
-import Navbar from "../Navbar";
+import { Button} from "@mui/material";
 
 export default function Home() {
   const [data, setData] = useState([{}]);
 
-  useEffect(() => {
-    fetch("/firebase")
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("/firebase")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setData(data);
+  //     });
+  // }, []);
 
   return (
     <div className="container">
@@ -24,12 +23,12 @@ export default function Home() {
       >
         Click here to begin
       </Button>
-      {console.log(data)}
+      {/* {console.log(data)}
       {typeof data.name === "undefined" ? (
         <p>Loading...</p>
       ) : (
         <p>{data.name}</p>
-      )}
+      )} */}
       {/* {typeof data.members === "undefined" ? (
         <p>Loading...</p>
       ) : (

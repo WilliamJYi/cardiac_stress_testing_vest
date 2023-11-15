@@ -1,19 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { Button } from "@mui/material";
 import "./Home.css";
-import { Button, CssBaseline } from "@mui/material";
-import Navbar from "../Navbar";
 
 export default function Home() {
-  const [data, setData] = useState([{}]);
-
-  useEffect(() => {
-    fetch("/firebase")
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-      });
-  }, []);
-
   return (
     <div className="container">
       <h1 className="title">Cardiac Stress Testing Vest</h1>
@@ -24,17 +13,6 @@ export default function Home() {
       >
         Click here to begin
       </Button>
-      {console.log(data)}
-      {typeof data.name === "undefined" ? (
-        <p>Loading...</p>
-      ) : (
-        <p>{data.name}</p>
-      )}
-      {/* {typeof data.members === "undefined" ? (
-        <p>Loading...</p>
-      ) : (
-        data.members.map((member, i) => <p key={i}>{member}</p>)
-      )} */}
     </div>
   );
 }

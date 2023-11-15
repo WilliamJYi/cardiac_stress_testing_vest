@@ -1,28 +1,32 @@
 export const mockProfiles = {
   users: [
     {
-      id: 1,
+      id: 0,
       name: "Will",
       age: 22,
       gender: "Male",
+      status: "Healthy",
     },
     {
-      id: 2,
+      id: 1,
       name: "Komal",
       age: 22,
       gender: "Female",
+      status: "Healthy",
     },
     {
-      id: 3,
+      id: 2,
       name: "Tash",
       age: 22,
       gender: "Male",
+      status: "Healthy",
     },
     {
-      id: 4,
+      id: 3,
       name: "Sabia",
       age: 22,
       gender: "Female",
+      status: "Healthy",
     },
   ],
 };

@@ -11,7 +11,6 @@ ref = db.reference("/")
 
 # retrieving data from root node
 data = ref.get()
-data2 = db.reference("/name").get()
-print(ref.get())
 
-print(db.reference("/name").get())
+# retrieving data from mockProfiles node
+profiles_data = db.reference("mockProfiles").get()

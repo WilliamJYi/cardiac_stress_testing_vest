@@ -23,5 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 #ignore flask-server
-/flask-server
+flask-server/
 

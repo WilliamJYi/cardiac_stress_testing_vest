@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
 import { Profiles } from "./components/Profiles/Profiles";
 import { Layout } from "./components/Layout/Layout";
-import { InfoPage } from "./components/InfoPage";
+import { InfoPage } from "./components/InfoPage/InfoPage";
 import CreateProfile from "./components/Profiles/CreateProfile";
 
 function App() {

@@ -4,6 +4,7 @@ import { Avatar } from "@mui/material";
 import { lightBlue } from "@mui/material/colors";
 import "./Profiles.css";
 
+
 export const Profiles = () => {
   const [profiles, setProfiles] = useState({});
 
@@ -15,6 +16,7 @@ export const Profiles = () => {
         console.log(data);
       });
   }, []);
+  
 
   return (
     <div className="container">

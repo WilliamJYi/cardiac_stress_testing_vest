@@ -1,0 +1,67 @@
+.user-page-container {
+  /* Add your styles for the UserPage component here */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.user-page-content {
+  /* Add your styles for the UserPage component here */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 100px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 50%;
+}
+
+.patient-list {
+  /* Add your styles for the UserPage component here */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -15px;
+  padding: 10px;
+  width: 50%;
+}
+
+.patient-list a {
+  /* Add your styles for the UserPage component here */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+  color: black;
+  background-color: #f8f8ff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  text-decoration: none;
+}
+
+.patient-list a:hover {
+  /* Add your styles for the UserPage component here */
+  background-color: #e6e6ff;
+}
+
+.add-patient {
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.add-patient:hover {
+  background-color: #0069d9;
+}

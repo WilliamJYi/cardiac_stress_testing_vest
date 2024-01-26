@@ -7,6 +7,10 @@ import { Profiles } from "./components/Profiles/Profiles";
 import { Layout } from "./components/Layout/Layout";
 import { InfoPage } from "./components/InfoPage/InfoPage";
 import CreateProfile from "./components/Profiles/CreateProfile";
+import CreateAccount from "./components/Auth/CreateAccount";
+import Login from "./components/Auth/Login";
+import UserPage from "./components/UserPage/UserPage";
+import PatientInfoPage from "./components/Profiles/PatientInfoPage";
 
 function App() {
   return (
@@ -16,9 +20,19 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" Component={Home} />
+            <Route path="/login" Component={Login} />
+            <Route path="/create-account" Component={CreateAccount} />
+            <Route path="/user-page/:id" Component={UserPage} />
             <Route path="/profiles" Component={Profiles} />
             <Route path="/profiles/:id" Component={InfoPage} />
-            <Route path="/profiles/create-profile" Component={CreateProfile} />
+            <Route
+              path="/user-page/:id/create-profile"
+              Component={CreateProfile}
+            />
+            <Route
+              path="/user-page/:id/patient-info/:id"
+              Component={PatientInfoPage}
+            />
           </Routes>
         </BrowserRouter>
       </Layout>

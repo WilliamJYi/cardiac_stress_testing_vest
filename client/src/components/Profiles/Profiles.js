@@ -4,19 +4,18 @@ import { Avatar } from "@mui/material";
 import { lightBlue } from "@mui/material/colors";
 import "./Profiles.css";
 
-
 export const Profiles = () => {
   const [profiles, setProfiles] = useState({});
 
   useEffect(() => {
-    fetch("/profiles")
-      .then((res) => res.json())
-      .then((data) => {
-        setProfiles(data);
-        console.log(data);
-      });
+    const fetchProfiles = async () => {
+      const res = await fetch("/profiles");
+      const data = await res.json();
+      setProfiles(data);
+      console.log(data);
+    };
+    fetchProfiles();
   }, []);
-  
 
   return (
     <div className="container">

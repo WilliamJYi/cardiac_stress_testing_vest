@@ -13,4 +13,4 @@ ref = db.reference("/")
 data = ref.get()
 
 # retrieving data from mockProfiles node
-profiles_data = db.reference("mockProfiles").get()
+profiles_data = db.reference("profiles").get()

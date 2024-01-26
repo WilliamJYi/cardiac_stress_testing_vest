@@ -1,46 +1,59 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-input[type="text"], 
+.create-patient-form {
+  margin-bottom: 200px;
+  width: 300px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.create-patient-title {
+  text-align: center;
+  margin: 10px;
+}
+
+input[type="text"],
 input[type="date"],
 select {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    font-size: 16px;
-    color: #333;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  font-size: 16px;
+  color: #333;
 }
 
 input[type="text"]:hover,
-input[type="text"]:focus, 
+input[type="text"]:focus,
 input[type="date"]:hover,
-input[type="date"]:focus, 
+input[type="date"]:focus,
 select:hover,
 select:focus {
-    background-color: #e6e6e6;
-    outline: none;
+  background-color: #e6e6e6;
+  outline: none;
 }
 
 input[type="submit"] {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-top: 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 input[type="submit"]:hover {
-    background-color: #0069d9;
+  background-color: #0069d9;
 }

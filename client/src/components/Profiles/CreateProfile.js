@@ -35,8 +35,8 @@ const CreateProfile = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     // Update the patients list in the database
+    console.log("patients", patients);
     update(ref(db, `/accounts/${username}/patients`), {
-      ...patients,
       [patientInfo.id]: patientInfo,
     }).then(() => {
       window.location.href = `/user-page/${username}`;

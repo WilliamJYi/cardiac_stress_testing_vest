@@ -32,7 +32,7 @@ const Login = () => {
     e.preventDefault();
 
     // Perform login logic here
-    if (username in accounts) {
+    if (accounts && username in accounts) {
       console.log("Username exists");
       if (accounts[username].password === password) {
         console.log("Password matches");

@@ -1,0 +1,103 @@
+/* PatientInfoPage.css */
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  gap: 100px;
+  width: 100%;
+}
+
+.patient-card-container {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  height: fit-content;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.patient-card-container h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card-info {
+  width: fit-content;
+}
+
+.card-container p {
+  margin: 8px 0;
+}
+
+.diagnosis-card-container {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 800px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.diagnosis-card-container h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.diagnosis-card-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.bpm-section {
+  padding: 15px;
+  background-color: #3498db;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 18px;
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bpm-label {
+  font-weight: bold;
+}
+
+.loading-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.ecg-section {
+  height: 300px;
+  width: 600px;
+  margin-bottom: 20px;
+  background-color:lightgray
+}
+
+/* Style for the Chart.js graph container */
+.react-chartjs-2 {
+  width: 100%;
+  max-width: 300px; /* Adjust the max-width based on your design */
+  margin: 0 auto;
+}

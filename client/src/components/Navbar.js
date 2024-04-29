@@ -5,11 +5,10 @@ import { Button } from "@mui/material";
 
 export default function Navbar() {
   const [isUserLoggedIn, setIsUserLoggedIn] = React.useState(false);
+  let username = localStorage.getItem("username");
 
   useEffect(() => {
-    localStorage.getItem("username")
-      ? setIsUserLoggedIn(true)
-      : setIsUserLoggedIn(false);
+    username ? setIsUserLoggedIn(true) : setIsUserLoggedIn(false);
   }, []);
 
   const handleLogout = () => {
@@ -28,7 +27,7 @@ export default function Navbar() {
               color="inherit"
               href={`/user-page/${localStorage.getItem("username")}`}
             >
-              User Page
+              {username}
             </Button>
             <Button color="inherit" onClick={handleLogout} href="/">
               Logout

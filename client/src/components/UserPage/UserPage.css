@@ -31,7 +31,7 @@
   width: 50%;
 }
 
-.patient-list a {
+.patient-name {
   /* Add your styles for the UserPage component here */
   display: flex;
   flex-direction: column;
@@ -64,4 +64,33 @@
 
 .add-patient:hover {
   background-color: #0069d9;
+}
+
+.patient{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.delete {
+    /* Add your styles for the UserPage component here */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    background-color: red;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+    text-decoration: none;
+}
+
+.delete:hover {
+  /* Add your styles for the UserPage component here */
+  cursor: pointer;
+  /* lighter hover background-color for delete button */
+  background-color: #ff6666;
 }

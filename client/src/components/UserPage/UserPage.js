@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { onValue, ref, set, update } from "firebase/database";
+import { onValue, ref, remove } from "firebase/database";
 import { db } from "../../firebaseConfig";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./UserPage.css";
 
 const UserPage = () => {
@@ -24,6 +25,15 @@ const UserPage = () => {
     });
   }, []);
 
+  const deletePatient = (patientId) => {
+    console.log(patientId);
+    remove(ref(db, `/accounts/${user.username}/patients/${patientId}`));
+    // You may want to update the state after deletion to reflect changes
+    setPatients((prevPatients) =>
+      prevPatients.filter((patient) => patient.id !== patientId)
+    );
+  };
+
   return (
     <div className="user-page-container">
       {user ? (
@@ -35,12 +45,21 @@ const UserPage = () => {
           <h2>Your Patients:</h2>
           <ul className="patient-list">
             {patients.map((patient, index) => (
-              <a
-                key={index}
-                href={`/user-page/${user.username}/patient-info/${patient.id}`}
-              >
-                {patient.firstName} {patient.lastName}
-              </a>
+              <div key={index} className="patient">
+                <a
+                  className="patient-name"
+                  key={index}
+                  href={`/user-page/${user.username}/patient-info/${patient.id}`}
+                >
+                  {patient.firstName} {patient.lastName}
+                </a>
+                <div
+                  className="delete"
+                  onClick={() => deletePatient(patient.id)}
+                >
+                  Delete
+                </div>
+              </div>
             ))}
           </ul>
           <a
